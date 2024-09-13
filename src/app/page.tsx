@@ -12,21 +12,23 @@ export default function Home() {
   return (
     <>
       <h1>Hello Auth</h1>
-      Email:   <input type="email"
+        Email:   <input type="email"
         value={email}
         onChange={(e) => { setEmail(e.target.value) }}
-      /><br />
+      /><br /> <br />
 
       Password:   <input type="password"
         value={password}
         onChange={(e) => { setPassword(e.target.value) }}
       />
-
+<br /> <br />
       <button onClick={
         () => { signupWithEmailPassword(email, password) }}
       >
         Signup
       </button>
+
+      <br /> <br />
 
       <button onClick={
         () => { loginWithEmailPassword(email, password) }}
@@ -37,3 +39,4 @@ export default function Home() {
     </>
   );
 }
+
